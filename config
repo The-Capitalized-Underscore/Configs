@@ -1,0 +1,47 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# background
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+command=$SCRIPT_DIR/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+
+[eyedropper]
+command=$SCRIPT_DIR/eyedropper/eyedropper
+label=
+full_text=<span foreground="#ffffff"></span>
+instance=#ffffff
+markup=pango
+
+[time]
+command=date '+%a %e-%b-%Y, %r'
+interval=1
+
+[shutdown_menu]
+command=$SCRIPT_DIR/shutdown_menu/shutdown_menu -c ; echo 󰐥 
+full_text=󰐥
